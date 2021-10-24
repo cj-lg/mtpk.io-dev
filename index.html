@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>MTPK I/O</title>
+    <base href="./" target="_self">
+    <meta name="description" content="Mountain Peak (MTPK) Experimental development site.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Develop, Experimental">
+    <meta name="author" content="CJ LG">
+    <meta property="og:title" content="MTPK.io">
+    <meta property="og:url" content="https://mtpk.io/">
+    <meta property="og:image" content="icon.png">
+    <meta property="og:description" content="Mountain Peak - Privacy and Security Centric Project">
+    <meta property="og:site_name" content="MTPK.io - Mountain Peak I/O">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="water.css">
+    <link rel="icon" type="image/png" href="icon.png">
+</head>
+
+<body>
+    <div>
+        <h1>Mountain Peak I/O</h1>
+        <br>
+        <h2>Coming Soon.</h2>
+        <br>
+        Click on the category summaries below for more details.
+
+        <noscript>
+            JavaScript will be required for numerous functionalities on this website.
+            If left disabled, you will be unable to use this site.
+            If you're afraid to use it for privacy reasons, ensure your browser is
+            up to date, as all modern browser prevent privacy invasive scripting
+            without user consent.
+        </noscript>
+    </div>
+    <details>
+        <summary>MTPK I/O: A true, Privacy Centric Project</summary>
+        <p>
+            To build a privacy centric website, we will focus around the Zero-Trust concept, and make it to where data
+            can be encrypted by the user and server, but also unreadable by the server. Regardless of the user's preference 
+            level, for security reasons, specific encryption details will not be disclosed.
+        </p>
+        <p>
+            Default data storage: All data will be encrypted at-rest, excluding the user's username, and user-id.
+            Data encrypted at-rest and only decrypted once the user is logged in.
+            Passwords will be further encrypted regardless of whether the user chooses to further encrypt their data
+            locally.
+        </p>
+        <p>
+            If the user so chooses, the data can be locally encrypted by the user, then additionally encrypted by the
+            server.
+            This gurantees that the data can not be accessed by any admins, including the site creator, myself.
+            This can be proven, where if you login to your user account, and your data is locally encrypted, data
+            retrieved
+            from the server will retain your encryption, and will be unreadable unless you import your local decryption
+            key.
+        </p>
+        <p>
+            If there is a legal issue of the data stored, all site admins (including myself), will be unable to view
+            locally
+            encrypted data, however, we will be able to erase said data. If the user loses their local decryption key,
+            they
+            will be unable to retrieve their data, unless they store a master key on the server (however that may ruin
+            the
+            point of locally encrypting data.)
+        </p>
+    </details>
+    <details>
+        <summary>Flexibility in Encryption</summary>
+        <p>
+            We plan on allowing users to chose their local encryption algorithms, as it will be consuming their own
+            processing power;
+            user's will have the freedom to chose between speed, or encryption complexity. Of course, we will recommend
+            a default
+            algorithm based on current day security standards. If possible, we will include a salt on top of the
+            encryption for
+            additional security.
+        </p>
+        <p>
+
+        </p>
+    </details>
+    <details>
+        <summary>Your Data, Your Choice</summary>
+        <p>
+            You choose how we handle your data, and we lay down the pros and cons of your choice. Below is some levels of 
+            how you want to handle your data.
+        </p>
+        <p>
+            Users will have a choice of how they want their data to be stored on this site:
+        <ul>
+            <li><strong>Level-0: Trusted</strong>. You trust this site, Data is stored, and encrypted purely by the server. 
+                Data will be unencrypted when you logs in. If you forget your password, you can still recover your data. 
+                You will be unable to customize encryption standards.
+            </li>
+            <br>
+            <li>
+                <strong>Level-1: Strict Trust</strong> You trust this site, but still want your data to be locally encrypted. 
+                Data will be encrypted and decrypted locally. When the data reaches the database, it will change it's encryption. 
+                This way, if you forget your password, you can still recover your data, and the data will return under your new 
+                password's encryption, and you will be able to locally decrypt it using your new password.
+            </li>
+            <br>
+            <li>
+                <strong>Level-2: Zero-Trust</strong>. You will create a site password, and a local decryption password.
+                The decryption password can be
+                autogenerated or user created. You can choose whether to use your decryption key as a master key, and
+                whether to
+                store that key on the website. You can create sub-keys with your master key. If you forget your
+                password,
+                your data will be unrecoverable.
+            </li>
+            <br>
+            <li>
+                <strong>Level-3: Hybrid Zero-Trust</strong>. You will create a site password. Your site password can become a
+                master key, or a master key can be auto generated.
+                Your data will be encrypted locally, and at the server level. The experience will be seamless, and speed
+                of decryption
+                will be determined by your configured encryption standards, and your local computer's hardware
+                capabilities. If you did not store your
+                master key on the site, your data will be unrecoverable.
+            </li>
+            <br>
+            <li>
+                Passwords will be further encrypted regardless of whether the user chooses to further encrypt their data
+                locally. The user's password will be encrypted by the site's system.
+            </li>
+        </ul>
+        </p>
+        <details>
+            <summary>Click here to see a simple table.</summary>
+            <table>
+                <tr>
+                    <th>Level</th>
+                    <th>Pros</th>
+                    <th>Cons</th>
+                </tr>
+                <tr>
+                    <td>Level-0: Trust</td>
+                    <td>
+                        <ul>
+                            <li>Fastest</li>
+                            <li>Encrypted In-Transit (using TLS)</li>
+                            <li>Encrypted at-rest in the cloud</li>
+                            <li>Data Recovery Possible</li>
+                            <li>Takes up the least amount of data</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Weakest level of security compared to other levels offered.</li>
+                            <li>Not locally encrypted</li>
+                            <li>Database encryption is soley entrusted to the server.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Level-1: Strict Trust</td>
+                    <td>
+                        <ul>
+                            <li>Encrypted locally</li>
+                            <li>Encrypted in-Transit (using TLS)</li>
+                            <li>Encrypted at-Rest in the cloud</li>
+                            <li>Data Recovery Possible</li>
+                            <li>Takes up less data, like level-0</li>
+                            <li>Virtually Seamless encryption/decryption</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Slowest at processing data</li>
+                            <li>Database encryption is soley entrusted to the server</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Level-2: Zero-Trust</td>
+                    <td>
+                        <ul>
+                            <li>On of the highest level of freedom compared to other options</li>
+                            <li>Most privacy of data</li>
+                            <li>Encrypted locally</li>
+                            <li>Data Encrypted in-Transit (using TLS)</li>
+                            <li>Additional Encryption at-Rest in the cloud</li>
+                            
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>May Dependent on User Password Complexity</li>
+                            <li>User will have to create a secondary password for decryption.</li>
+                            <li>Data unrecoverable if password is lost.</li>
+                            <li>Takes up more storage</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Level-3: Hybrid Zero-Trust</td>
+                    <td>
+                        <ul>
+                            <li>Highest level of freedom</li>
+                            <li>Second highest level of privacy</li>
+                            <li>Data encrypted locally</li>
+                            <li>Data Encrypted in-Transit (using TLS)</li>
+                            <li>Additional Encryption at-Rest in the cloud</li>
+                            <li>Option to create and store a masterkey on the server</li>
+                            <li>Masterkey is created from user password, and used as a recovery/backup key</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>May be Dependent on User Password Complexity</li>
+                            <li>Data unrecoverable if the masterkey is lost. (masterkey is stored on site is optional, but not recommended)</li>
+                            <li>Takes up more storage</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </details>
+    </details>
+    <details>
+        <summary>Project Development Plan</summary>
+        <p>
+            This is very early in development. As such, there are no specific time-schedule dates. This is a rough
+            schetch of the sites development plan.
+        </p>
+        <p>
+        <ul>
+            <li>
+                Create user page's.
+            </li>
+            <li>
+                Create user database.
+            </li>
+            <li>
+                Implement basic storage with limits for testing purposes.
+            </li>
+            <li>
+                Implement multiple-level encryption for user's data.
+            </li>
+            <li>
+                Implement user localized encryption.
+            </li>
+            <li>
+                Add various encryption algorithms for user preference.
+            </li>
+            <li>
+                Open up for early beta testing.
+            </li>
+        </ul>
+        </p>
+    </details>
+    <hr>
+    <h3>Browser compatibility</h3>
+
+    <p style="color:grey">
+        <b>For encryption algorithm compatibility identification,
+            and user session security, and functionality.</b>
+    </p>
+
+    <div id="browser-identification"></div>
+
+    <script type="text/javascript">
+
+        txt = "<p>Browser Brand: " + navigator.userAgentData.brands[0].brand + "</p>";
+        txt += "<p>Browser Name: " + navigator.userAgentData.brands[1].brand + "</p>";
+        txt += "<p>Browser Version: " + navigator.userAgentData.brands[0].version + "</p>";
+        txt += "<p>Cookies Enabled: " + navigator.cookieEnabled + "</p>";
+        txt += "<p>Platform: " + navigator.userAgentData.platform + "</p>";
+        txt += "<p>Mobile: " + navigator.userAgentData.mobile + "</p>";
+
+        document.getElementById("browser-identification").innerHTML = txt;
+
+    </script>
+</body>
+
+</html>

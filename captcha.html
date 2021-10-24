@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>hCaptcha Test</title>
+    <base href="./" target="_self">
+    <meta name="description" content="Mountain Peak (MTPK) Experimental development site.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Develop, Experimental">
+    <meta name="author" content="CJ LG">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="water.css">
+    <link rel="icon" type="image/png" href="icon.png">
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+</head>
+
+<body>
+    <form action="./captcha.html" method="POST">
+        <input type="text" name="email" placeholder="Email" />
+        <input type="password" name="password" placeholder="Password" />
+        <div class="h-captcha" data-sitekey="6075ba12-fa62-4943-92ac-464d851da1fd"></div>
+        <br />
+        <input type="submit" value="Submit" />
+    </form>
+</body>
+
+</html>
